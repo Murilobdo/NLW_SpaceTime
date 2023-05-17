@@ -20,16 +20,26 @@ export default function Home() {
           </div>
 
           <p className="text-sm leading-snug">
-            <span className="underline">Crie sua conta</span> e salve < br/> 
+            <span className="underline transition-colors">Crie sua conta</span> e salve < br/> 
             suas memórias!
           </p>
         </a>
 
         {/* Hero */}
-        <div>
+        <div className="space-y-5">
           <Image src={nlwLogo} alt="NLW Spacetime" />
+          <div className="max-w-[420px] space-y-5">
+            <h1 className="text-5xl font-bold leading-tight text-gray-50">Sua cápsula do tempo</h1>
+            <p className="text-lg leading-relaxed">Colecione momentos marcantes da sua jornada e < br/> compartilhe (se quiser) com o mundo!</p>
+            <a href="" className="inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black hover:bg-green-600">CADASTRAR LEMBRANçA</a>
+          </div>
         </div>
 
+
+        {/* Footer */}
+        <div>
+          <p>Feito com 💜 no NLW da <a href="www.rocketseat.com" className="underline hover:text-gray-50 transition-colors">Rocketseat</a></p>
+        </div>
       </div>
       
       <div className="flex flex-col p-16 bg-[url(../assets/bg-stars.svg)] bg-cover">
