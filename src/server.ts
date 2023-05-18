@@ -1,17 +1,11 @@
 import fastify from 'fastify';
-import { PrismaClient } from '@prisma/client';
+import { memoriesRoutes } from './routes/memorys'
 
-const app = fastify();
-const prisma = new PrismaClient();
+const app = fastify()
 
-app.get('/hello', async () => {
-    return await prisma.user.findMany();
-})
+app.register(memoriesRoutes)
 
-app.listen({
-    port: 3333
-}).then(() => {
-    console.log("HTTP Server running on http://localhost:3333 👍")
-})
-
-
+app.listen({ port: 3333 })
+    .then(() => {
+        console.log("Server running on http://localhost:3333")
+    })
